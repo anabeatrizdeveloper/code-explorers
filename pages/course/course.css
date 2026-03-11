@@ -383,4 +383,17 @@
   .signature-box p {
     font-size: 0.78rem;
   }
+
+  .practice-form label,
+#finalChallengeForm label {
+  font-family: "Nunito", sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.practice-form h2,
+#finalChallengeForm h2 {
+  margin-bottom: 10px;
+}
+
 }

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Final Challenge | Explorer Course</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="course.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">Code Explorers</div>
+    <nav class="nav">
+      <a href="../../index.html">Home</a>
+      <a href="course-home.html">Explorer Course</a>
+      <a href="certificate.html">Certificate</a>
+    </nav>
+  </header>
+
+  <main class="page-content">
+    <section class="page-hero">
+      <p class="eyebrow">Final Challenge</p>
+      <h1>Explorer Final Challenge</h1>
+      <p class="subtitle">Complete the final challenge and earn your last points.</p>
+    </section>
+
+    <section class="content-card">
+      <form id="finalChallengeForm">
+        <h2>1. What does a loop do?</h2>
+        <label><input type="radio" name="q1" data-correct="true" /> It repeats actions</label><br><br>
+        <label><input type="radio" name="q1" /> It deletes code</label><br><br>
+
+        <h2>2. What is a variable?</h2>
+        <label><input type="radio" name="q2" data-correct="true" /> A place to store information</label><br><br>
+        <label><input type="radio" name="q2" /> A kind of computer mouse</label><br><br>
+
+        <h2>3. What is debugging?</h2>
+        <label><input type="radio" name="q3" data-correct="true" /> Finding and fixing mistakes</label><br><br>
+        <label><input type="radio" name="q3" /> Printing a website</label><br><br>
+
+        <h2>4. What is input?</h2>
+        <label><input type="radio" name="q4" data-correct="true" /> Information going into the computer</label><br><br>
+        <label><input type="radio" name="q4" /> A picture on the screen</label><br><br>
+
+        <h2>5. What is a sequence?</h2>
+        <label><input type="radio" name="q5" data-correct="true" /> The correct order of steps</label><br><br>
+        <label><input type="radio" name="q5" /> A random group of colors</label><br><br>
+
+        <button type="submit" class="button">Submit Final Challenge</button>
+      </form>
+
+      <p class="lesson-message" id="finalMessage"></p>
+    </section>
+
+    <section class="next-step">
+      <a class="button secondary-button" href="certificate.html">Go to Certificate</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>You are almost done, explorer.</p>
+  </footer>
+
+  <script src="course.js"></script>
+</body>
+</html>

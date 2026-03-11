@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Variables Check | Explorer Course</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../../style.css" />
+  <link rel="stylesheet" href="../course.css" />
+  <script src="../course.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">Code Explorers</div>
+    <nav class="nav">
+      <a href="../../../index.html">Home</a>
+      <a href="../course-home.html">Explorer Course</a>
+      <a href="../certificate.html">Certificate</a>
+    </nav>
+  </header>
+
+  <main class="page-content">
+    <section class="page-hero">
+      <p class="eyebrow">Practice</p>
+      <h1>Variables Check</h1>
+      <p class="subtitle">Answer the question and save your score.</p>
+    </section>
+
+    <section class="content-card">
+      <form class="practice-form" data-practice="variablesQuiz" data-answer="box">
+        <h2>What is a variable?</h2>
+
+        <label>
+          <input type="radio" name="quiz-option" value="robot" />
+          A robot that moves in a game
+        </label>
+        <br /><br />
+
+        <label>
+          <input type="radio" name="quiz-option" value="box" />
+          A labeled box that stores information
+        </label>
+        <br /><br />
+
+        <label>
+          <input type="radio" name="quiz-option" value="button" />
+          A button on a screen
+        </label>
+        <br /><br />
+
+        <button type="submit" class="button">Submit Answer</button>
+      </form>
+
+      <p class="lesson-message" id="practiceMessage"></p>
+    </section>
+
+    <section class="next-step">
+      <a class="button secondary-button" href="practices/loops-check.html">Next Practice</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Practice helps explorers grow.</p>
+  </footer>
+
+  <script src="../course.js"></script>
+</body>
+</html>
