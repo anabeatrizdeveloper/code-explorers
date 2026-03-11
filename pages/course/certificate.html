@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Certificate | Explorer Course</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="course.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">Code Explorers</div>
+    <nav class="nav">
+      <a href="../../index.html">Home</a>
+      <a href="course-home.html">Explorer Course</a>
+      <a href="certificate.html">Certificate</a>
+    </nav>
+  </header>
+
+  <main class="page-content">
+    <p class="locked-note" id="certificateLocked"></p>
+
+    <section class="certificate-card" id="certificateContent" style="display: none;">
+      <p class="eyebrow">Certificate of Completion</p>
+      <h1>Code Explorers</h1>
+      <h2>This certifies that</h2>
+      <h1 id="certificateName">Explorer Name</h1>
+
+      <p><strong>Age:</strong> <span id="certificateAge"></span></p>
+      <p><strong>Start date:</strong> <span id="certificateStart"></span></p>
+      <p><strong>Completion date:</strong> <span id="certificateEnd"></span></p>
+
+      <h2>Completed Topics</h2>
+      <ul id="certificateTopics"></ul>
+
+      <p>
+        Successfully completed the Explorer Course and learned the basics of coding through fun and simple lessons.
+      </p>
+    </section>
+
+    <div class="download-area">
+      <button class="button" id="downloadCertificate">Download Certificate as PDF</button>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>Keep exploring and learning.</p>
+  </footer>
+
+  <script src="course.js"></script>
+</body>
+</html>

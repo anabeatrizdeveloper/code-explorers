@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Explorer Course | Code Explorers</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="course.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">Code Explorers</div>
+    <nav class="nav">
+      <a href="../../index.html">Home</a>
+      <a href="../coding.html">Coding</a>
+      <a href="../algorithms.html">Algorithms</a>
+      <a href="../computer-thinking.html">Thinking</a>
+      <a href="../challenges.html">Challenges</a>
+      <a href="explorer-course.html">Explorer Course</a>
+    </nav>
+  </header>
+
+  <main class="course-entry">
+    <section class="page-hero">
+      <p class="eyebrow">Explorer Course</p>
+      <h1>Start Your Learning Adventure</h1>
+      <p class="subtitle">
+        Tell us a little about yourself before you begin the course.
+      </p>
+    </section>
+
+    <section class="content-card course-form-card">
+      <form id="explorer-form">
+        <label for="studentName">What is your name?</label>
+        <input type="text" id="studentName" name="studentName" placeholder="Enter your full name" required />
+
+        <label for="studentAge">How old are you?</label>
+        <input type="number" id="studentAge" name="studentAge" placeholder="Enter your age" min="5" max="15" required />
+
+        <button type="submit" class="button">Start the Adventure</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Every explorer starts with curiosity.</p>
+  </footer>
+
+  <script src="course.js"></script>
+</body>
+</html>

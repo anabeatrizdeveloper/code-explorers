@@ -1,0 +1,85 @@
+.course-actions {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.secondary-button {
+  background-color: var(--green-main);
+}
+
+.lesson-message {
+  text-align: center;
+  margin-top: 18px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  color: var(--green-dark);
+}
+
+.progress-box {
+  max-width: 700px;
+  margin: 0 auto 24px;
+  background-color: var(--cream);
+  border: 2px solid rgba(127, 176, 105, 0.2);
+  border-radius: 18px;
+  padding: 20px;
+  text-align: center;
+}
+
+.progress-box h2 {
+  margin-bottom: 10px;
+}
+
+.progress-list {
+  list-style: none;
+  margin-top: 12px;
+  padding: 0;
+}
+
+.progress-list li {
+  margin: 8px 0;
+  font-family: "Nunito", sans-serif;
+}
+
+.locked-note {
+  text-align: center;
+  margin-top: 14px;
+  color: var(--orange-accent);
+  font-weight: 700;
+}
+
+.certificate-card {
+  max-width: 850px;
+  margin: 30px auto;
+  background: var(--cream);
+  border: 4px solid var(--yellow-accent);
+  border-radius: 24px;
+  padding: 32px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.certificate-card h1 {
+  margin-bottom: 12px;
+}
+
+.certificate-card h2 {
+  margin: 16px 0 10px;
+}
+
+.certificate-card p,
+.certificate-card li {
+  font-family: "Nunito", sans-serif;
+}
+
+.certificate-card ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.download-area {
+  text-align: center;
+  margin-top: 22px;
+}
