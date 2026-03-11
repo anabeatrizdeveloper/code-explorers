@@ -4,12 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Certificate | Explorer Course</title>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../../style.css" />
   <link rel="stylesheet" href="course.css" />
 </head>
 <body>
-  <header class="site-header">
+  <header class="site-header no-print">
     <div class="logo">Code Explorers</div>
     <nav class="nav">
       <a href="../../index.html">Home</a>
@@ -18,33 +18,74 @@
     </nav>
   </header>
 
-  <main class="page-content">
-    <p class="locked-note" id="certificateLocked"></p>
+  <main class="page-content certificate-wrapper">
+    <p class="locked-note no-print" id="certificateLocked"></p>
 
     <section class="certificate-card" id="certificateContent" style="display: none;">
-      <p class="eyebrow">Certificate of Completion</p>
-      <h1>Code Explorers</h1>
-      <h2>This certifies that</h2>
-      <h1 id="certificateName">Explorer Name</h1>
+      <div class="certificate-content">
+        <div class="certificate-top">
+          <span class="certificate-badge">🏅</span>
+          <p class="eyebrow">Certificate of Completion</p>
+          <span class="certificate-badge">🌿</span>
+        </div>
 
-      <p><strong>Age:</strong> <span id="certificateAge"></span></p>
-      <p><strong>Start date:</strong> <span id="certificateStart"></span></p>
-      <p><strong>Completion date:</strong> <span id="certificateEnd"></span></p>
+        <h1 class="certificate-title">Code Explorers</h1>
+        <p class="certificate-subtitle">Explorer Course Achievement Award</p>
 
-      <h2>Completed Topics</h2>
-      <ul id="certificateTopics"></ul>
+        <p class="certificate-description">
+          This certificate is proudly presented to
+        </p>
 
-      <p>
-        Successfully completed the Explorer Course and learned the basics of coding through fun and simple lessons.
-      </p>
+        <h1 class="student-name" id="certificateName">Explorer Name</h1>
+
+        <p class="certificate-description">
+          for successfully completing the Explorer Course and learning important coding concepts through fun, simple, and creative lessons.
+        </p>
+
+        <div class="certificate-details">
+          <div class="detail-box">
+            <h3>Explorer Age</h3>
+            <p id="certificateAge">9</p>
+          </div>
+
+          <div class="detail-box">
+            <h3>Start Date</h3>
+            <p id="certificateStart">03/11/2026</p>
+          </div>
+
+          <div class="detail-box">
+            <h3>Completion Date</h3>
+            <p id="certificateEnd">03/15/2026</p>
+          </div>
+        </div>
+
+        <h2 class="topics-title">Topics Completed</h2>
+        <ul class="certificate-topics" id="certificateTopics"></ul>
+
+        <p class="certificate-footer-note">
+          Keep exploring, learning, and building amazing things with code.
+        </p>
+
+        <div class="signature-row">
+          <div class="signature-box">
+            <div class="signature-line"></div>
+            <p>Explorer Signature</p>
+          </div>
+
+          <div class="signature-box">
+            <div class="signature-line"></div>
+            <p>Code Explorers</p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <div class="download-area">
+    <div class="download-area no-print">
       <button class="button" id="downloadCertificate">Download Certificate as PDF</button>
     </div>
   </main>
 
-  <footer class="site-footer">
+  <footer class="site-footer no-print">
     <p>Keep exploring and learning.</p>
   </footer>
 
