@@ -10,6 +10,9 @@
   <link rel="stylesheet" href="course.css" />
 </head>
 <body>
+  <div class="cloud cloud-1"></div>
+  <div class="cloud cloud-2"></div>
+  <div class="cloud cloud-3"></div>
   <header class="site-header">
     <div class="logo">Code Explorers</div>
     <nav class="nav">
@@ -19,13 +22,6 @@
       <a href="../computer-thinking.html">Thinking</a>
       <a href="../challenges.html">Challenges</a>
       <a href="explorer-course.html">Explorer Course</a>
-      <a href="practices/variables-check.html">Start Practice</a>
-      <a href="practices/loops-check.html">Start Practice</a>
-      <a href="practices/conditionals-check.html">Start Practice</a>
-      <a href="practices/debugging-check.html">Start Practice</a>
-      <a href="practices/practice-check.html">Start Practice</a>
-      <a href="practices/sequences-check.html">Start Practice</a>
-      <a href="practices/input-output-check.html">Start Practice</a>
     </nav>
   </header>
 
@@ -39,12 +35,24 @@
   </section>
 
   <section class="progress-box">
-    <h2>Your Progress</h2>
-    <p id="progressCount">0 of 7 lessons completed</p>
-    <ul class="progress-list" id="progressList"></ul>
-    <p class="locked-note" id="certificateStatus">Complete all lessons and practice activities to unlock your certificate.</p>
-    <p class="locked-note" id="scoreStatus">Explorer Score: 0</p>
-  </section>
+  <h2>Your Progress</h2>
+  <p id="progressCount"></p>
+
+  <div class="progress-columns">
+    <div class="progress-section">
+      <h3 class="progress-title">Lessons</h3>
+      <ul class="progress-list lessons-list" id="lessonsProgressList"></ul>
+    </div>
+
+    <div class="progress-section">
+      <h3 class="progress-title">Practices</h3>
+      <ul class="progress-list practices-list" id="practicesProgressList"></ul>
+    </div>
+  </div>
+
+  <p id="scoreStatus"></p>
+  <p id="certificateStatus" class="locked-note"></p>
+</section>
 
   <section class="cards-section">
     <h2>Learn</h2>
@@ -99,49 +107,49 @@
       <article class="card">
         <h3>Variables Check</h3>
         <p>Test what you learned about variables.</p>
-        <a href="variables-check.html">Start Practice</a>
+        <a href="practices/variables-check.html">Start Practice</a>
       </article>
 
       <article class="card">
         <h3>Loops Check</h3>
         <p>Practice how repetition works in code.</p>
-        <a href="loops-check.html">Start Practice</a>
+        <a href="practices/loops-check.html">Start Practice</a>
       </article>
 
       <article class="card">
         <h3>Conditionals Check</h3>
         <p>Practice how computers make choices.</p>
-        <a href="conditionals-check.html">Start Practice</a>
+        <a href="practices/conditionals-check.html">Start Practice</a>
       </article>
 
       <article class="card">
         <h3>Debugging Check</h3>
         <p>Practice finding mistakes in code.</p>
-        <a href="debugging-check.html">Start Practice</a>
+        <a href="practices/debugging-check.html">Start Practice</a>
       </article>
 
       <article class="card">
         <h3>Practice Platforms Check</h3>
         <p>Review learning platforms and tools.</p>
-        <a href="practice-check.html">Start Practice</a>
+        <a href="practices/practice-check.html">Start Practice</a>
       </article>
 
       <article class="card">
         <h3>Sequences Check</h3>
         <p>Practice putting steps in the right order.</p>
-        <a href="sequences-check.html">Start Practice</a>
+        <a href="practices/sequences-check.html">Start Practice</a>
       </article>
 
       <article class="card">
         <h3>Input and Output Check</h3>
         <p>Practice how computers get and show information.</p>
-        <a href="input-output-check.html">Start Practice</a>
+        <a href="practices/input-output-check.html">Start Practice</a>
       </article>
 
       <article class="card">
         <h3>Final Challenge</h3>
         <p>Complete the final activity and finish your adventure.</p>
-        <a href="final-challenge.html">Start Challenge</a>
+        <a href="practices/final-challenge.html">Start Challenge</a>
       </article>
     </div>
   </section>

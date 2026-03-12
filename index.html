@@ -5,9 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Code Explorers</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
+  <div class="cloud-layer cloud-back"></div>
+  <div class="cloud-layer cloud-front"></div>
+
   <header class="site-header">
     <div class="logo">Code Explorers</div>
     <nav class="nav">
@@ -21,55 +24,69 @@
   </header>
 
   <main>
-  <section class="hero">
-    <p class="eyebrow">Welcome, explorer!</p>
-    <h1>Let’s discover how computers think</h1>
-    <p class="subtitle">
-      Learn coding, logic, and algorithms in a fun and simple way.
-    </p>
-    <a class="button" href="pages/coding.html">Start the Adventure</a>
-  </section>
+    <section class="hero">
+  <div class="cloud cloud-1"></div>
+  <div class="cloud cloud-2"></div>
+  <div class="cloud cloud-3"></div>
 
-  <section class="cards-section">
-    <h2>Choose a Trail</h2>
-    <div class="cards">
-      <article class="card">
-        <h3>What is Coding?</h3>
-        <p>Learn how people give instructions to computers.</p>
-        <a href="pages/coding.html">Explore</a>
-      </article>
+  <p class="eyebrow">Welcome, explorer!</p>
 
-      <article class="card">
-        <h3>Algorithms</h3>
-        <p>Discover how step-by-step instructions help solve problems.</p>
-        <a href="pages/algorithms.html">Explore</a>
-      </article>
+  <h1 class="title-wood">
+    <span class="wood-screw-left"></span>
+    Let’s discover how computers think
+    <span class="wood-screw-right"></span>
+  </h1>
 
-      <article class="card">
-        <h3>Computer Thinking</h3>
-        <p>See how computers follow rules and make simple decisions.</p>
-        <a href="pages/computer-thinking.html">Explore</a>
-      </article>
+  <p class="subtitle">
+    Learn coding, logic, and algorithms in a fun and simple way.
+  </p>
 
-      <article class="card">
-        <h3>Challenges</h3>
-        <p>Try small logic activities and test what you learned.</p>
-        <a href="pages/challenges.html">Explore</a>
-      </article>
-    </div>
-  </section>
+  <a class="button" href="pages/coding.html">Start the Adventure</a>
+</section>
 
-  <section class="about-section">
-    <h2>About Code Explorers</h2>
-    <p>
-      Code Explorers is a simple educational website made for curious kids.
-      Here, you can explore coding concepts in a playful and friendly way.
-    </p>
-  </section>
-</main>
+    <section class="cards-section">
+      <h2>Choose a Trail</h2>
+
+      <div class="cards">
+        <article class="card">
+          <h3>What is Coding?</h3>
+          <p>Learn how people give instructions to computers.</p>
+          <a href="pages/coding.html">Explore</a>
+        </article>
+
+        <article class="card">
+          <h3>Algorithms</h3>
+          <p>Discover how step-by-step instructions help solve problems.</p>
+          <a href="pages/algorithms.html">Explore</a>
+        </article>
+
+        <article class="card">
+          <h3>Computer Thinking</h3>
+          <p>See how computers follow rules and make simple decisions.</p>
+          <a href="pages/computer-thinking.html">Explore</a>
+        </article>
+
+        <article class="card">
+          <h3>Challenges</h3>
+          <p>Try small logic activities and test what you learned.</p>
+          <a href="pages/challenges.html">Explore</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="about-section">
+      <h2>About Code Explorers</h2>
+      <p>
+        Code Explorers is a simple educational website made for curious kids.
+        Here, you can explore coding concepts in a playful and friendly way.
+      </p>
+    </section>
+  </main>
 
   <footer class="site-footer">
     <p>Made for curious kids and beginner explorers.</p>
   </footer>
+
+  <script src="clouds.js"></script>
 </body>
 </html>

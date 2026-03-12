@@ -21,6 +21,18 @@ const totalPracticeItems = [
   "finalChallenge"
 ];
 
+// Nomes bonitos para mostrar na interface
+const practiceDisplayNames = {
+  variablesQuiz: "Variables Check",
+  loopsQuiz: "Loops Check",
+  conditionalsQuiz: "Conditionals Check",
+  debuggingQuiz: "Debugging Check",
+  practiceQuiz: "Practice Check",
+  sequencesQuiz: "Sequences Check",
+  inputOutputQuiz: "Input and Output Check",
+  finalChallenge: "Final Challenge"
+};
+
 // Lê os dados salvos do curso
 function getExplorerData() {
   const savedData = localStorage.getItem("explorerCourseData");
@@ -39,6 +51,11 @@ function normalizeExplorerData(data) {
   if (!data.totalScore) data.totalScore = 0;
   if (!data.endDate) data.endDate = "";
   return data;
+}
+
+// Converte a chave da prática para um nome bonito
+function formatPracticeName(practiceKey) {
+  return practiceDisplayNames[practiceKey] || practiceKey;
 }
 
 // Marca uma lição como concluída
@@ -122,11 +139,20 @@ function updateWelcomeMessage() {
 // Atualiza a UI de progresso
 function updateProgressUI() {
   const progressCount = document.getElementById("progressCount");
-  const progressList = document.getElementById("progressList");
+  const lessonsProgressList = document.getElementById("lessonsProgressList");
+  const practicesProgressList = document.getElementById("practicesProgressList");
   const certificateStatus = document.getElementById("certificateStatus");
   const scoreStatus = document.getElementById("scoreStatus");
 
-  if (!progressCount && !progressList && !certificateStatus && !scoreStatus) return;
+  if (
+    !progressCount &&
+    !lessonsProgressList &&
+    !practicesProgressList &&
+    !certificateStatus &&
+    !scoreStatus
+  ) {
+    return;
+  }
 
   let explorerData = getExplorerData();
   if (!explorerData) return;
@@ -142,21 +168,27 @@ function updateProgressUI() {
       `${completedPracticeCount} of ${totalPracticeItems.length} practice activities completed`;
   }
 
-  if (progressList) {
-    progressList.innerHTML = "";
+  if (lessonsProgressList) {
+    lessonsProgressList.innerHTML = "";
 
     totalLessons.forEach((lesson) => {
       const item = document.createElement("li");
       const done = completedLessons.includes(lesson);
-      item.textContent = done ? `✅ Lesson: ${lesson}` : `⬜ Lesson: ${lesson}`;
-      progressList.appendChild(item);
+      item.textContent = done ? `✅ ${lesson}` : `⬜ ${lesson}`;
+      lessonsProgressList.appendChild(item);
     });
+  }
+
+  if (practicesProgressList) {
+    practicesProgressList.innerHTML = "";
 
     totalPracticeItems.forEach((practiceKey) => {
       const item = document.createElement("li");
       const done = Object.prototype.hasOwnProperty.call(explorerData.scores, practiceKey);
-      item.textContent = done ? `⭐ Practice: ${practiceKey}` : `⬜ Practice: ${practiceKey}`;
-      progressList.appendChild(item);
+      item.textContent = done
+        ? `⭐ ${formatPracticeName(practiceKey)}`
+        : `⬜ ${formatPracticeName(practiceKey)}`;
+      practicesProgressList.appendChild(item);
     });
   }
 
@@ -306,7 +338,9 @@ function setupCertificatePage() {
   let explorerData = getExplorerData();
 
   if (!explorerData) {
-    certificateLocked.textContent = "Start the Explorer Course first.";
+    if (certificateLocked) {
+      certificateLocked.textContent = "Start the Explorer Course first.";
+    }
     certificateContent.style.display = "none";
     if (downloadButton) downloadButton.style.display = "none";
     return;
@@ -323,19 +357,27 @@ function setupCertificatePage() {
   );
 
   if (!allDoneLessons || !allDonePractice) {
-    certificateLocked.textContent = "Complete all lessons and practice activities to unlock the certificate.";
+    if (certificateLocked) {
+      certificateLocked.textContent =
+        "Complete all lessons and practice activities to unlock the certificate.";
+    }
     certificateContent.style.display = "none";
     if (downloadButton) downloadButton.style.display = "none";
     return;
   }
 
-  certificateLocked.textContent = "";
+  if (certificateLocked) {
+    certificateLocked.textContent = "";
+  }
+
   certificateContent.style.display = "block";
 
   if (certificateName) certificateName.textContent = explorerData.studentName;
   if (certificateAge) certificateAge.textContent = explorerData.studentAge;
   if (certificateStart) certificateStart.textContent = explorerData.startDate;
-  if (certificateEnd) certificateEnd.textContent = explorerData.endDate || new Date().toLocaleDateString();
+  if (certificateEnd) {
+    certificateEnd.textContent = explorerData.endDate || new Date().toLocaleDateString();
+  }
   if (certificateScore) certificateScore.textContent = explorerData.totalScore;
 
   if (certificateTopics) {
